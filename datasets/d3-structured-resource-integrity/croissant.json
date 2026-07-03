@@ -1,0 +1,300 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "fileSet": "cr:fileSet",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "samplingRate": "cr:samplingRate"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "prompsit-d3-structured-resource-integrity",
+  "description": "D3 - Structured-resource integrity. Real i18n resource fragments (Android string resources, Apache-2.0) in four format profiles (xml/json/properties/arb), EN -> 9 languages, where the resource skeleton (keys, schema) must be preserved and only values translated. Open layer = dev (full references) + test inputs + contrastive pack; test/hidden references withheld. Version 1.0 uses oracle-validated machine labels (oracle_validated); human review is not required.",
+  "version": "1.0",
+  "datePublished": "2026-06-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://mozilladatacollective.com/",
+  "citeAs": "Prompsit D3 - Structured-resource Integrity (v1.0, 2026).",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "dev.jsonl",
+      "name": "dev.jsonl",
+      "description": "Open dev split: records with references.",
+      "contentUrl": "data/dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "0feb2f8e0dc593ef0301654e06240b69b7b2300d6bdd9deac824a9a2b9b2b4d3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test.input.jsonl",
+      "name": "test.input.jsonl",
+      "description": "Test inputs (references withheld).",
+      "contentUrl": "data/test.input.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "abe62645a37c7acbc9c32461c127cf0639232580589b1de13f92dbdee2d81530"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "contrastive.dev.jsonl",
+      "name": "contrastive.dev.jsonl",
+      "description": "Validator-verified contrastive minimal pairs (dev).",
+      "contentUrl": "data/contrastive.dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "a28d9e180e0cdd46306e3fd3e455518e37d56a7bf1345b699f39c174fb6718f5"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dev",
+      "name": "dev",
+      "description": "Dev records.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dev/item_id",
+          "name": "item_id",
+          "description": "Stable id; shared by all 9 locale rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/target_lang",
+          "name": "target_lang",
+          "description": "Target language.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/format",
+          "name": "format",
+          "description": "Resource format profile (xml/json/properties/arb).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source",
+          "name": "source",
+          "description": "EN resource fragment.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/reference",
+          "name": "reference",
+          "description": "Localized resource fragment (dev only).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "reference"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "test_inputs",
+      "name": "test_inputs",
+      "description": "Test inputs (no reference).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/item_id",
+          "name": "item_id",
+          "description": "Stable id; shared by all 9 locale rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/target_lang",
+          "name": "target_lang",
+          "description": "Target language.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/format",
+          "name": "format",
+          "description": "Resource format profile (xml/json/properties/arb).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source",
+          "name": "source",
+          "description": "EN resource fragment.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

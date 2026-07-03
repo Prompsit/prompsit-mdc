@@ -1,0 +1,164 @@
+{
+  "name": "prompsit-d2-locale-data-integrity",
+  "version": "1.0",
+  "schema_version": "0.2",
+  "seed": 7255450304059208671,
+  "correctness_logic": "adapt to target locale; the value itself must not change",
+  "tracks": {
+    "format": "headline: deterministic CLDR formatting (number/currency/date separators + unit symbol localization); value unchanged"
+  },
+  "source_locale": "en_US",
+  "locales": {
+    "source": "en_US",
+    "targets": [
+      "ca_ES",
+      "es_ES",
+      "fr_FR",
+      "it_IT",
+      "pt_PT",
+      "de_DE",
+      "nl_NL",
+      "pl_PL",
+      "ru_RU"
+    ]
+  },
+  "oracle": {
+    "library": "babel",
+    "babel_version": "2.18.0",
+    "cldr_version": "bundled-with-babel-2.18.0"
+  },
+  "sources": 680,
+  "records": 6120,
+  "splits_records": {
+    "test": 4266,
+    "hidden": 1224,
+    "dev": 630
+  },
+  "splits_sources": {
+    "test": 474,
+    "dev": 70,
+    "hidden": 136
+  },
+  "entity_kind_sources": {
+    "number": 160,
+    "currency": 160,
+    "date": 160,
+    "unit": 200
+  },
+  "track_sources": {
+    "format": 680
+  },
+  "per_class_floor": 400,
+  "format_track": {
+    "classes": [
+      "wrong_decimal_separator",
+      "wrong_grouping",
+      "mis_converted_datetime",
+      "broken_currency_format",
+      "wrong_unit_format"
+    ],
+    "quota": {
+      "wrong_decimal_separator": {
+        "records_k1": 2223,
+        "records_test": 1939,
+        "applicable_locales": [
+          "ca",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "pl",
+          "pt-PT",
+          "ru"
+        ],
+        "status": "PASS"
+      },
+      "wrong_grouping": {
+        "records_k1": 1449,
+        "records_test": 1260,
+        "applicable_locales": [
+          "ca",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "pl",
+          "pt-PT",
+          "ru"
+        ],
+        "status": "PASS"
+      },
+      "mis_converted_datetime": {
+        "records_k1": 1152,
+        "records_test": 1008,
+        "applicable_locales": [
+          "ca",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "pl",
+          "pt-PT",
+          "ru"
+        ],
+        "status": "PASS"
+      },
+      "broken_currency_format": {
+        "records_k1": 1152,
+        "records_test": 999,
+        "applicable_locales": [
+          "ca",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "pl",
+          "pt-PT",
+          "ru"
+        ],
+        "status": "PASS"
+      },
+      "wrong_unit_format": {
+        "records_k1": 425,
+        "records_test": 374,
+        "applicable_locales": [
+          "fr",
+          "pl",
+          "pt-PT",
+          "ru"
+        ],
+        "status": "PASS"
+      }
+    },
+    "headline": true
+  },
+  "quota_status": {
+    "wrong_decimal_separator": "PASS",
+    "wrong_grouping": "PASS",
+    "mis_converted_datetime": "PASS",
+    "broken_currency_format": "PASS",
+    "wrong_unit_format": "PASS"
+  },
+  "carrier_source": "D1 human translations; license inherited per record",
+  "annotation_status": "oracle_validated",
+  "k1_verdict": "PASS",
+  "k1": {
+    "engines_overall_pass_pct": {
+      "strong_locale_aware": 100.0,
+      "commercial_mid": 96.1,
+      "realistic_mid": 57.9,
+      "separator_weak": 59.2,
+      "unlocalized_passthrough": 16.5,
+      "raw_weak": 16.5
+    }
+  },
+  "k2_verdict": "PASS",
+  "k2_false_positive_rate_pct": 0.0,
+  "contrastive_pairs": 821,
+  "croissant": "croissant.json",
+  "validation": "PASS"
+}

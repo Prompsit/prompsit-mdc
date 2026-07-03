@@ -1,0 +1,70 @@
+# MDC submission metadata. Archive = open layer only
+# (dev reference + test inputs + contrastive). Hidden split is never uploaded.
+file_path: open-v1.0.tar.gz
+datasheet_path: DATASHEET.md
+
+name: Prompsit D5 - Linguistic-resource Adherence
+shortDescription: MT benchmark for respecting a provided glossary and translation memory; EN to 9 languages.
+longDescription: >
+  An evaluation benchmark that tests whether machine translation follows
+  supplied linguistic resources: a glossary of prescribed terminology and a
+  translation memory (TM) of approved past translations. Glossary terms are
+  CLDR display names (territories, languages, currencies, via Babel) and the
+  TM sentences are human translations shared with the D1 inline-asset dataset:
+  510 source items x 9 target languages (ca/es/fr/it/pt-PT/de/nl/pl/ru) =
+  4,590 records across four resource profiles (glossary, exact TM, fuzzy TM,
+  and a glossary-vs-TM conflict where the glossary must win). Scoring is fully
+  automatic: for each record, deterministic checks compare the term slot in
+  the output against the supplied glossary or TM entry and report which of six
+  error categories occur; a record passes when none does, and a system's score
+  is its pass rate, reported overall and per category. Reference labels are
+  generated automatically from the source, not human-annotated. No training
+  set is shipped; the dev split is a small labelled set for optional few-shot
+  prompting or sanity checks. The open layer contains the dev split (with
+  references), the test inputs (references withheld), and a contrastive pack
+  of (correct, damaged) minimal pairs; the hidden split is not distributed.
+  The scoring code is open-source at https://github.com/Prompsit/prompsit-mdc
+  - see DATASHEET.md inside the archive for construction method, checks, and
+  limits.
+
+locale: mul
+task: MT
+format: JSONL
+licenseAbbreviation: CC_BY_4_0
+showContactInfo: true
+visibility: PUBLIC
+
+restrictions: Test-split reference labels withheld; hidden split not distributed.
+forbiddenUsage: >
+  No additional legal restriction beyond CC-BY-4.0. For benchmark integrity,
+  disclose any training or tuning on the open test inputs and do not report such
+  runs as uncontaminated official benchmark results.
+additionalConditions: >
+  Preserve the included attribution notices; cite the dataset and upstream
+  projects when used in publications.
+
+pointOfContactFullName: Prompsit Language Engineering
+pointOfContactEmail: info@prompsit.com
+
+fundedByFullName: Prompsit Language Engineering
+fundedByEmail: info@prompsit.com
+
+legalContactFullName: Prompsit Language Engineering
+legalContactEmail: info@prompsit.com
+
+createdByFullName: Prompsit Language Engineering
+createdByEmail: info@prompsit.com
+
+intendedUsage: >
+  Evaluation of machine-translation systems and pipelines that can consume a
+  supplied glossary and translation memory, across nine languages. No training
+  set is shipped.
+ethicalReviewProcess: >
+  CLDR terminology and permissively-licensed human translations only; no
+  personal data.
+
+# True = dataset is non-exclusive to MDC; False = exclusively hosted on MDC.
+exclusivityOptOut: true
+
+# Must be true to actually submit. Keep true so dry-run mirrors the live call.
+agreeToSubmit: true

@@ -1,0 +1,5 @@
+# D5 build dependencies (Python 3.11+)
+# Terminology oracle: CLDR display names via Babel (Unicode license).
+Babel==2.18.0
+# Croissant 1.0 metadata build + validation:
+mlcroissant>=1.0

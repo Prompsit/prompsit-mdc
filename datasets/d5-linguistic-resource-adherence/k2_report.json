@@ -1,0 +1,15 @@
+{
+  "base_acceptance_pct": 100.0,
+  "legal_variants_tested": 13770,
+  "false_positive_flips": 0,
+  "false_positive_rate_pct": 0.0,
+  "stop_threshold_pct": 5.0,
+  "verdict": "PASS",
+  "by_generator": {
+    "pad": 4590,
+    "trailing_nl": 4590,
+    "carrier_reword": 4590
+  },
+  "flips_by_generator": {},
+  "examples": []
+}

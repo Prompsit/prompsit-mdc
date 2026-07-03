@@ -1,0 +1,270 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "fileSet": "cr:fileSet",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "samplingRate": "cr:samplingRate"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "prompsit-d1-inline-asset-integrity",
+  "description": "D1 - Inline asset integrity. EN UI strings with inline assets (XLIFF tags, HTML, printf/brace placeholders, template vars, inline ICU MessageFormat, Markdown, do-not-translate spans) and human translations into ca/es/fr/it/pt-PT/de/nl/pl/ru, from permissively-licensed key-aligned localization catalogues. A single balanced 9-language set (599 sources, identical class profile per language). Open layer = dev (full references) + test inputs + a validator-verified contrastive pack; references for test and the hidden split are withheld. Version 1.0 uses oracle-validated machine labels (oracle_validated); human review is not required.",
+  "version": "1.0",
+  "datePublished": "2026-06-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://mozilladatacollective.com/",
+  "citeAs": "Prompsit D1 - Inline Asset Integrity (v1.0, 2026).",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "dev.jsonl",
+      "name": "dev.jsonl",
+      "description": "Open dev split: records with references.",
+      "contentUrl": "data/dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "80980ba1cb5c67b89779024d53cf2ef8b61e7e95280e4e2e115e1a1b1e139ed9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test.input.jsonl",
+      "name": "test.input.jsonl",
+      "description": "Test split: inputs only (references withheld).",
+      "contentUrl": "data/test.input.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "fc5b4251e40be377664455504cd873fd9d815601a24434be2286f74804149363"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "contrastive.dev.jsonl",
+      "name": "contrastive.dev.jsonl",
+      "description": "Validator-verified contrastive minimal pairs (dev).",
+      "contentUrl": "data/contrastive.dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "11adf61e345cfec22b8c789878b4e2627e51636e4d77ad00286e60ae857cce67"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dev",
+      "name": "dev",
+      "description": "Dev records (one per source x target).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dev/item_id",
+          "name": "item_id",
+          "description": "Stable item id; shared by all 9 target rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/target_lang",
+          "name": "target_lang",
+          "description": "Target language (ca/es/fr/it/pt-PT/de/nl/pl/ru).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source",
+          "name": "source",
+          "description": "English source string with inline assets.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/reference",
+          "name": "reference",
+          "description": "Human reference translation (dev split only).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "reference"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "test_inputs",
+      "name": "test_inputs",
+      "description": "Test inputs (no reference).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/item_id",
+          "name": "item_id",
+          "description": "Stable item id; shared by all 9 target rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/target_lang",
+          "name": "target_lang",
+          "description": "Target language (ca/es/fr/it/pt-PT/de/nl/pl/ru).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source",
+          "name": "source",
+          "description": "English source string with inline assets.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+# Python packaging artifact dir only at repo root; dataset build pipelines
+# (datasets/*/build/) MUST stay tracked.
+/build/
+
+# Dataset archives and the internal-review bundle are not stored in git
+# (rebuildable: make_release.py / tools/make_review_bundle.py).
+*.tar.gz
+*.tgz
+*.zip
+prompsit-mdc-review-*.tar.gz
+
+# Local Prompsit API credentials (never commit secrets)
+.prompsit_cred.json
+
+# Transient baseline-run logs
+datasets/**/baselines/_*.log
+
+# Local scratch (underscore-prefixed): smoke/sample slices + one-off slice tool.
+# Never committed; keeps the published data/ dirs clean.
+datasets/*/data/_*.jsonl
+tools/_make_slice.py
+
+# Regenerable simulated K1 baselines (tools/baselines/materialize_baselines.py).
+# Real live-API baselines (D1 prompsit_*) stay committed.
+datasets/*/baselines/*/
+!datasets/*/baselines/prompsit_mt/
+!datasets/*/baselines/prompsit_tagblind/

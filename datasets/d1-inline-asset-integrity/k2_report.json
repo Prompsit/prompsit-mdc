@@ -1,0 +1,20 @@
+{
+  "base_acceptance_pct": 100.0,
+  "base_pass": 5391,
+  "base_total": 5391,
+  "legal_variants_tested": 830,
+  "false_positive_flips": 0,
+  "false_positive_rate_pct": 0.0,
+  "stop_threshold_pct": 5.0,
+  "verdict": "PASS",
+  "by_generator": {
+    "fr_typography": 316,
+    "guillemets": 136,
+    "positional_swap": 378
+  },
+  "flips_by_generator": {},
+  "flips_by_gate": {},
+  "examples": [],
+  "legal_moves_sources_with_movable": 395,
+  "legal_moves_total_marks": 787
+}

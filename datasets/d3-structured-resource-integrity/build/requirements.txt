@@ -1,0 +1,4 @@
+# D3 build dependencies (Python 3.11+)
+# Parsing uses the stdlib (json, xml.etree, custom .properties); no CLDR needed.
+# Croissant 1.0 metadata build + validation only:
+mlcroissant>=1.0

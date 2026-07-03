@@ -1,0 +1,89 @@
+{
+  "name": "prompsit-d1-inline-asset-integrity",
+  "version": "1.0",
+  "schema_version": "0.1",
+  "seed": 9752869913464860629,
+  "correctness_logic": "inline assets preserved byte-exact",
+  "languages": {
+    "source": "en",
+    "targets": [
+      "ca",
+      "es",
+      "fr",
+      "it",
+      "pt-PT",
+      "de",
+      "nl",
+      "pl",
+      "ru"
+    ]
+  },
+  "sources": 599,
+  "records": 5391,
+  "splits_records": {
+    "dev": 639,
+    "test": 3717,
+    "hidden": 1035
+  },
+  "splits_sources": {
+    "dev": 71,
+    "test": 413,
+    "hidden": 115
+  },
+  "classes": [
+    "xliff",
+    "html_tag",
+    "software_placeholder",
+    "template_variable",
+    "icu_messageformat",
+    "markdown_inline",
+    "do_not_translate"
+  ],
+  "per_class_floor": 400,
+  "quota_status": {
+    "xliff": "PASS",
+    "html_tag": "PASS",
+    "software_placeholder": "PASS",
+    "template_variable": "PASS",
+    "icu_messageformat": "PASS",
+    "markdown_inline": "PASS",
+    "do_not_translate": "PASS"
+  },
+  "annotation_status": "oracle_validated",
+  "legal_moves": "oracle_validated",
+  "k1_verdict": "PASS",
+  "k1": {
+    "best_system": "tag_aware_reference",
+    "classes_separated": "6/7",
+    "scored_items": 3546,
+    "offline_best_engine": "strong_tag_aware",
+    "offline_tag_blind_classes_separated": "7/7",
+    "offline_scored_items": 4356
+  },
+  "k2_verdict": "PASS",
+  "k2_false_positive_rate_pct": 0.0,
+  "contrastive_pairs": 1279,
+  "croissant": "croissant.json",
+  "mdc_dry_run": "PASS (Task.MT, License.CC_BY_4_0)",
+  "validation": "PASS",
+  "per_class_records_k1": {
+    "corrupted_syntax": 4356,
+    "dnt_violation": 1260,
+    "extra_asset": 4356,
+    "invalid_nesting": 2772,
+    "lost_attribute": 2304,
+    "missing_asset": 4356,
+    "moved_paired_tag": 2772,
+    "wrong_order": 2565,
+    "broken_icu": 1467
+  },
+  "per_asset_class_records_k1": {
+    "do_not_translate": 1260,
+    "html_tag": 1323,
+    "template_variable": 1350,
+    "markdown_inline": 1431,
+    "software_placeholder": 1503,
+    "xliff": 1548,
+    "icu_messageformat": 1467
+  }
+}

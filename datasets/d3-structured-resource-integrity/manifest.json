@@ -1,0 +1,144 @@
+{
+  "name": "prompsit-d3-structured-resource-integrity",
+  "version": "1.0",
+  "schema_version": "0.2",
+  "seed": 7967358486219981801,
+  "correctness_logic": "preserve the skeleton, translate only content",
+  "languages": {
+    "source": "en",
+    "targets": [
+      "ca",
+      "es",
+      "fr",
+      "it",
+      "pt-PT",
+      "de",
+      "nl",
+      "pl",
+      "ru"
+    ]
+  },
+  "format_profiles": [
+    "xml",
+    "json",
+    "properties",
+    "arb"
+  ],
+  "dnt_contract": {
+    "literal_tier": "letterless symbol / number / ratio / placeholder -- auto-skip, gated for every format, no signal required",
+    "marked_tier": "any alphabetic token (acronyms AND brands / proper nouns) -- gated ONLY where an explicit DNT marker is observable (XML translatable=\"false\"); un-marked passthrough is not penalized"
+  },
+  "sources": 420,
+  "records": 3780,
+  "splits_records": {
+    "test": 2646,
+    "dev": 378,
+    "hidden": 756
+  },
+  "splits_sources": {
+    "test": 294,
+    "dev": 42,
+    "hidden": 84
+  },
+  "format_profile_sources": {
+    "xml": 120,
+    "json": 100,
+    "properties": 100,
+    "arb": 100
+  },
+  "classes": [
+    "parser_break",
+    "key_path_translated",
+    "schema_changed",
+    "value_untranslated",
+    "nonvalue_modified_literal",
+    "nonvalue_modified_marked"
+  ],
+  "per_class_floor": 400,
+  "quota": {
+    "parser_break": {
+      "records_k1": 3024,
+      "records_test": 2646,
+      "formats": [
+        "arb",
+        "json",
+        "properties",
+        "xml"
+      ],
+      "status": "PASS"
+    },
+    "key_path_translated": {
+      "records_k1": 3024,
+      "records_test": 2646,
+      "formats": [
+        "arb",
+        "json",
+        "properties",
+        "xml"
+      ],
+      "status": "PASS"
+    },
+    "schema_changed": {
+      "records_k1": 3024,
+      "records_test": 2646,
+      "formats": [
+        "arb",
+        "json",
+        "properties",
+        "xml"
+      ],
+      "status": "PASS"
+    },
+    "value_untranslated": {
+      "records_k1": 3024,
+      "records_test": 2646,
+      "formats": [
+        "arb",
+        "json",
+        "properties",
+        "xml"
+      ],
+      "status": "PASS"
+    },
+    "nonvalue_modified_literal": {
+      "records_k1": 2592,
+      "records_test": 2268,
+      "formats": [
+        "arb",
+        "json",
+        "properties",
+        "xml"
+      ],
+      "status": "PASS"
+    },
+    "nonvalue_modified_marked": {
+      "records_k1": 432,
+      "records_test": 378,
+      "formats": [
+        "xml"
+      ],
+      "status": "PASS"
+    }
+  },
+  "quota_status": {
+    "parser_break": "PASS",
+    "key_path_translated": "PASS",
+    "schema_changed": "PASS",
+    "value_untranslated": "PASS",
+    "nonvalue_modified_literal": "PASS",
+    "nonvalue_modified_marked": "PASS"
+  },
+  "source_data": {
+    "corpus": "aosp_settings",
+    "license": "Apache-2.0",
+    "url": "https://github.com/aosp-mirror/platform_packages_apps_Settings",
+    "ref": "7c598253ff60"
+  },
+  "annotation_status": "oracle_validated",
+  "k1_verdict": "PASS",
+  "k2_verdict": "PASS",
+  "k2_false_positive_rate_pct": 0.0,
+  "contrastive_pairs": 1890,
+  "croissant": "croissant.json",
+  "validation": "PASS"
+}

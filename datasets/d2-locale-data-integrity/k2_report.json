@@ -1,0 +1,17 @@
+{
+  "base_acceptance_pct": 100.0,
+  "base_pass": 6120,
+  "base_total": 6120,
+  "legal_variants_tested": 20036,
+  "false_positive_flips": 0,
+  "false_positive_rate_pct": 0.0,
+  "stop_threshold_pct": 5.0,
+  "verdict": "PASS",
+  "by_generator": {
+    "ws": 14526,
+    "alt": 5510
+  },
+  "flips_by_generator": {},
+  "flips_by_kind": {},
+  "examples": []
+}

@@ -1,0 +1,4 @@
+# D1 build dependencies (Python 3.11+)
+# Asset extraction, validators, K1/K2 and contrastive use the stdlib only.
+# Croissant 1.0 metadata build + validation (build_croissant.py):
+mlcroissant>=1.0

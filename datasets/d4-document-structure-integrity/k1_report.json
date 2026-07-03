@@ -1,0 +1,209 @@
+{
+  "scored_items_clean": 1152,
+  "engines_overall_pass_pct": {
+    "strong_structure_aware": 100.0,
+    "commercial_mid": 95.1,
+    "realistic_mid": 52.4,
+    "node_dropper": 0.0,
+    "link_breaker": 0.0,
+    "structure_flattener": 0.0,
+    "raw_weak": 0.0
+  },
+  "best_engine": "strong_structure_aware",
+  "separation_vs_best": {
+    "structure_flattener": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "lost_or_duplicated_node": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "block_order_change": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "table_cell_corruption": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_link_image": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "roundtrip_failure": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "raw_weak": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "lost_or_duplicated_node": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "block_order_change": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "table_cell_corruption": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_link_image": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "roundtrip_failure": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "realistic_mid": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "lost_or_duplicated_node": {
+          "best_pass": 100.0,
+          "eng_pass": 52.4,
+          "p": 0.0,
+          "separated": true
+        },
+        "block_order_change": {
+          "best_pass": 100.0,
+          "eng_pass": 52.4,
+          "p": 0.0,
+          "separated": true
+        },
+        "table_cell_corruption": {
+          "best_pass": 100.0,
+          "eng_pass": 52.4,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_link_image": {
+          "best_pass": 100.0,
+          "eng_pass": 52.4,
+          "p": 0.0,
+          "separated": true
+        },
+        "roundtrip_failure": {
+          "best_pass": 100.0,
+          "eng_pass": 52.4,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "node_dropper": {
+      "kind": "targeted",
+      "target_classes": [
+        "lost_or_duplicated_node"
+      ],
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "lost_or_duplicated_node": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "block_order_change": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "table_cell_corruption": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_link_image": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "roundtrip_failure": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "link_breaker": {
+      "kind": "targeted",
+      "target_classes": [
+        "broken_link_image"
+      ],
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "lost_or_duplicated_node": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "block_order_change": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "table_cell_corruption": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_link_image": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "roundtrip_failure": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    }
+  },
+  "k1_verdict": "PASS",
+  "note": "Corruption-operator simulation; real D4 validators."
+}

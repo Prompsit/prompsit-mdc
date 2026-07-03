@@ -1,0 +1,148 @@
+{
+  "name": "prompsit-d5-linguistic-resource-adherence",
+  "version": "1.0",
+  "schema_version": "0.2",
+  "seed": 705719668539613162,
+  "correctness_logic": "respect the provided linguistic resources",
+  "languages": {
+    "source": "en",
+    "targets": [
+      "ca",
+      "es",
+      "fr",
+      "it",
+      "pt-PT",
+      "de",
+      "nl",
+      "pl",
+      "ru"
+    ]
+  },
+  "resource_profiles": [
+    "glossary",
+    "tm_exact",
+    "tm_fuzzy",
+    "conflict"
+  ],
+  "tracks": {
+    "glossary": {
+      "classes": [
+        "required_term_missing",
+        "forbidden_term_used",
+        "inconsistent_term"
+      ],
+      "headline": true
+    },
+    "tm": {
+      "classes": [
+        "approved_tm_ignored"
+      ],
+      "headline": true
+    },
+    "conflict": {
+      "classes": [
+        "conflict_mishandled"
+      ],
+      "headline": false
+    },
+    "quality": {
+      "classes": [
+        "fuzzy_discernment"
+      ],
+      "headline": false
+    }
+  },
+  "delivery_contract": {
+    "glossary": "vendor-specific forced terminology (Google/DeepL/MS dictionaries); many engines (incl. prompsit) have none",
+    "tm": "universal TMX import / segment API",
+    "conflict": "glossary-over-TM precedence; TM-only systems cannot satisfy it -> reported apart, never headlined",
+    "quality": "fuzzy-match discernment: a stale 85% match must NOT be copied (anti-correlated with adherence; not an adherence metric)"
+  },
+  "sources": 510,
+  "records": 4590,
+  "splits_records": {
+    "dev": 459,
+    "test": 3213,
+    "hidden": 918
+  },
+  "splits_sources": {
+    "dev": 51,
+    "test": 357,
+    "hidden": 102
+  },
+  "resource_profile_sources": {
+    "glossary": 150,
+    "tm_exact": 120,
+    "tm_fuzzy": 120,
+    "conflict": 120
+  },
+  "classes": [
+    "required_term_missing",
+    "forbidden_term_used",
+    "inconsistent_term",
+    "approved_tm_ignored",
+    "conflict_mishandled",
+    "fuzzy_discernment"
+  ],
+  "per_class_floor": 400,
+  "quota": {
+    "required_term_missing": {
+      "records_k1": 1080,
+      "records_test": 945,
+      "track": "glossary",
+      "status": "PASS"
+    },
+    "forbidden_term_used": {
+      "records_k1": 1080,
+      "records_test": 945,
+      "track": "glossary",
+      "status": "PASS"
+    },
+    "inconsistent_term": {
+      "records_k1": 1080,
+      "records_test": 945,
+      "track": "glossary",
+      "status": "PASS"
+    },
+    "approved_tm_ignored": {
+      "records_k1": 864,
+      "records_test": 756,
+      "track": "tm",
+      "status": "PASS"
+    },
+    "conflict_mishandled": {
+      "records_k1": 864,
+      "records_test": 756,
+      "track": "conflict",
+      "status": "PASS"
+    },
+    "fuzzy_discernment": {
+      "records_k1": 864,
+      "records_test": 756,
+      "track": "quality",
+      "status": "PASS"
+    }
+  },
+  "quota_status": {
+    "required_term_missing": "PASS",
+    "forbidden_term_used": "PASS",
+    "inconsistent_term": "PASS",
+    "approved_tm_ignored": "PASS",
+    "conflict_mishandled": "PASS",
+    "fuzzy_discernment": "PASS"
+  },
+  "resource_sources": {
+    "terminology": "CLDR display names via Babel",
+    "terminology_license": "Unicode-3.0",
+    "terminology_url": "https://unicode.org/Public/cldr/",
+    "babel_version": "2.18.0",
+    "carrier_tm": "D1 human translations, license inherited"
+  },
+  "annotation_status": "oracle_validated",
+  "k1_verdict": "PASS",
+  "k2_verdict": "PASS",
+  "k2_false_positive_rate_pct": 0.0,
+  "contrastive_pairs": 729,
+  "croissant": "croissant.json",
+  "validation": "PASS"
+}

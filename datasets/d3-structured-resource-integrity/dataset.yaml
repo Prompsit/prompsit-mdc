@@ -1,0 +1,72 @@
+# MDC submission metadata (dry-run ready). Archive = open layer only
+# (dev references + test inputs + contrastive). Hidden split and
+# withheld test references are never uploaded.
+file_path: open-v1.0.tar.gz
+datasheet_path: DATASHEET.md
+
+name: Prompsit D3 - Structured-resource Integrity
+shortDescription: MT benchmark for translating only the values of structured resource files (XML/JSON/.properties/ARB); EN to 9 languages.
+longDescription: >
+  An evaluation benchmark that tests whether machine translation preserves the
+  skeleton of structured resource files - keys, schema, and non-translatable
+  fields - while translating only the values, with output that still parses.
+  English resource fragments in four formats (Android XML, JSON, Java
+  .properties, Flutter ARB) are paired with human translations from AOSP
+  Settings string resources (Apache-2.0): 420 sources x 9 target languages
+  (ca/es/fr/it/pt-PT/de/nl/pl/ru) = 3,780 records. Scoring is fully automatic:
+  for each record, deterministic checks parse the system output and report
+  which of six error categories occur - parser_break, key_path_translated,
+  schema_changed, value_untranslated, nonvalue_modified_literal (a symbol,
+  number, placeholder or the ARB @@locale field altered; checked in every
+  format) and nonvalue_modified_marked (a token marked translatable="false"
+  altered; XML only); a record passes when none does, and a system's score is
+  its pass rate, reported overall and per category. Reference labels are
+  generated automatically from the source, not human-annotated. No training
+  set is shipped; the dev split is a small labelled set for optional few-shot
+  prompting or sanity checks. The open layer contains the dev split (with
+  references), the test inputs (references withheld), and a contrastive pack
+  of (correct, damaged) minimal pairs; the hidden split is not distributed.
+  The scoring code is open-source at https://github.com/Prompsit/prompsit-mdc
+  - see DATASHEET.md inside the archive for construction method, checks, and
+  limits.
+
+locale: mul
+task: MT
+format: JSONL
+licenseAbbreviation: CC_BY_4_0
+showContactInfo: true
+visibility: PUBLIC
+
+restrictions: Test-split reference labels withheld; hidden split not distributed.
+forbiddenUsage: >
+  No additional legal restriction beyond CC-BY-4.0. For benchmark integrity,
+  disclose any training or tuning on the open test inputs and do not report such
+  runs as uncontaminated official benchmark results.
+additionalConditions: >
+  Preserve the included attribution notices; cite the dataset and upstream
+  projects when used in publications.
+
+pointOfContactFullName: Prompsit Language Engineering
+pointOfContactEmail: info@prompsit.com
+
+fundedByFullName: Prompsit Language Engineering
+fundedByEmail: info@prompsit.com
+
+legalContactFullName: Prompsit Language Engineering
+legalContactEmail: info@prompsit.com
+
+createdByFullName: Prompsit Language Engineering
+createdByEmail: info@prompsit.com
+
+intendedUsage: >
+  Evaluation of machine-translation systems for value-only translation of
+  structured resource files (XML, JSON, .properties, ARB) across nine
+  languages. No training set is shipped.
+ethicalReviewProcess: >
+  Permissively-licensed (Apache-2.0 AOSP) resources only; no personal data.
+
+# True = dataset is non-exclusive to MDC; False = exclusively hosted on MDC.
+exclusivityOptOut: true
+
+# Must be true to actually submit. Keep true so dry-run mirrors the live call.
+agreeToSubmit: true

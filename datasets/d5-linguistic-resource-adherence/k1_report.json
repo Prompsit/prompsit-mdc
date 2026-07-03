@@ -1,0 +1,239 @@
+{
+  "scored_items_clean": 3672,
+  "engines_overall_pass_pct": {
+    "strong_resource_aware": 100.0,
+    "commercial_mid": 95.1,
+    "realistic_mid": 50.2,
+    "glossary_violator": 70.6,
+    "fuzzy_copier": 76.5,
+    "resource_ignorer": 0.0,
+    "raw_weak": 0.0
+  },
+  "best_engine": "strong_resource_aware",
+  "separation_vs_best": {
+    "resource_ignorer": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "required_term_missing": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "forbidden_term_used": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "inconsistent_term": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "approved_tm_ignored": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "conflict_mishandled": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "fuzzy_discernment": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "raw_weak": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "required_term_missing": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "forbidden_term_used": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "inconsistent_term": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "approved_tm_ignored": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "conflict_mishandled": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "fuzzy_discernment": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "realistic_mid": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "required_term_missing": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "forbidden_term_used": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "inconsistent_term": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "approved_tm_ignored": {
+          "best_pass": 100.0,
+          "eng_pass": 50.6,
+          "p": 0.0,
+          "separated": true
+        },
+        "conflict_mishandled": {
+          "best_pass": 100.0,
+          "eng_pass": 49.5,
+          "p": 0.0,
+          "separated": true
+        },
+        "fuzzy_discernment": {
+          "best_pass": 100.0,
+          "eng_pass": 50.2,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "glossary_violator": {
+      "kind": "targeted",
+      "target_classes": [
+        "required_term_missing"
+      ],
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "required_term_missing": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "forbidden_term_used": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "inconsistent_term": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "approved_tm_ignored": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "conflict_mishandled": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "fuzzy_discernment": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        }
+      }
+    },
+    "fuzzy_copier": {
+      "kind": "targeted",
+      "target_classes": [
+        "fuzzy_discernment"
+      ],
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "required_term_missing": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "forbidden_term_used": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "inconsistent_term": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "approved_tm_ignored": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "conflict_mishandled": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "fuzzy_discernment": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    }
+  },
+  "k1_verdict": "PASS",
+  "note": "Corruption-operator simulation; real D5 validator."
+}

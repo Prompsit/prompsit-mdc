@@ -1,0 +1,4 @@
+# D4 build dependencies (Python 3.11+)
+# HTML parsing uses the stdlib (html.parser).
+# Croissant 1.0 metadata build + validation:
+mlcroissant>=1.0

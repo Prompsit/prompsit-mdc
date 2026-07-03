@@ -1,0 +1,90 @@
+{
+  "name": "prompsit-d4-document-structure-integrity",
+  "version": "1.0",
+  "schema_version": "0.1",
+  "seed": 15626473554817715828,
+  "correctness_logic": "preserve the document tree, translate only text",
+  "languages": {
+    "source": "en",
+    "targets": [
+      "ca",
+      "es",
+      "fr",
+      "it",
+      "pt-PT",
+      "de",
+      "nl",
+      "pl",
+      "ru"
+    ]
+  },
+  "structure_profiles": [
+    "html"
+  ],
+  "sources": 160,
+  "records": 1440,
+  "splits_records": {
+    "test": 1008,
+    "hidden": 288,
+    "dev": 144
+  },
+  "splits_sources": {
+    "test": 112,
+    "hidden": 32,
+    "dev": 16
+  },
+  "classes": [
+    "lost_or_duplicated_node",
+    "block_order_change",
+    "table_cell_corruption",
+    "broken_link_image",
+    "roundtrip_failure"
+  ],
+  "per_class_floor": 400,
+  "quota": {
+    "lost_or_duplicated_node": {
+      "records_k1": 1152,
+      "records_test": 1008,
+      "status": "PASS"
+    },
+    "block_order_change": {
+      "records_k1": 1152,
+      "records_test": 1008,
+      "status": "PASS"
+    },
+    "table_cell_corruption": {
+      "records_k1": 1152,
+      "records_test": 1008,
+      "status": "PASS"
+    },
+    "broken_link_image": {
+      "records_k1": 1152,
+      "records_test": 1008,
+      "status": "PASS"
+    },
+    "roundtrip_failure": {
+      "records_k1": 1152,
+      "records_test": 1008,
+      "status": "PASS"
+    }
+  },
+  "quota_status": {
+    "lost_or_duplicated_node": "PASS",
+    "block_order_change": "PASS",
+    "table_cell_corruption": "PASS",
+    "broken_link_image": "PASS",
+    "roundtrip_failure": "PASS"
+  },
+  "content_source": {
+    "content_source": "D1 human translations",
+    "license": "per-segment (Apache-2.0 / BSD-3-Clause / MIT, inherited)",
+    "structure": "templated HTML (headings/list/table/link/image)"
+  },
+  "annotation_status": "oracle_validated",
+  "k1_verdict": "PASS",
+  "k2_verdict": "PASS",
+  "k2_false_positive_rate_pct": 0.0,
+  "contrastive_pairs": 720,
+  "croissant": "croissant.json",
+  "validation": "PASS"
+}

@@ -1,0 +1,17 @@
+# Normalize ALL text to LF in the repo and in every working copy, regardless of OS.
+# This keeps `checksums.sha256` / croissant `sha256` reproducible: a Windows checkout
+# no longer gets CRLF (which previously diverged from the canonical LF git blobs).
+* text=auto eol=lf
+
+# Binary assets: never touch line endings.
+*.gz   binary
+*.tgz  binary
+*.tar  binary
+*.zip  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.xz   binary
+*.bz2  binary

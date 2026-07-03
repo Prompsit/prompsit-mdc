@@ -1,0 +1,55 @@
+# Example metadata for a Mozilla Data Collective submission.
+# Fields mirror the `DatasetSubmission` model from the `datacollective` SDK.
+# Replace placeholder values before a real (non dry-run) upload.
+
+# Path to the dataset archive, relative to this file (or absolute).
+file_path: dataset.tar.gz
+
+name: Prompsit Example Dataset
+shortDescription: A short one-line description of the dataset.
+longDescription: >
+  A detailed description of the dataset: what it contains, how it was
+  collected, structure of the archive, and any caveats consumers should
+  know about before using it.
+
+locale: en-US
+
+# Enum member name from datacollective.Task (e.g. ASR, TTS, NMT, ...).
+task: ASR
+
+format: TSV
+
+# Enum member name from datacollective.License (e.g. CC_BY_4_0).
+# For a custom license remove this field and set `license`/`licenseUrl` instead.
+licenseAbbreviation: CC_BY_4_0
+showContactInfo: true
+visibility: PUBLIC
+
+other: >
+  Detailed description of the dataset contents, structure and intended use.
+restrictions: No restrictions.
+forbiddenUsage: No commercial re-identification of subjects.
+additionalConditions: Cite the dataset when used in publications.
+
+pointOfContactFullName: Prompsit Language Engineering
+pointOfContactEmail: info@prompsit.com
+
+fundedByFullName: Prompsit
+fundedByEmail: info@prompsit.com
+
+legalContactFullName: Prompsit Language Engineering
+legalContactEmail: info@prompsit.com
+
+createdByFullName: Prompsit Language Engineering
+createdByEmail: info@prompsit.com
+
+intendedUsage: >
+  Training and evaluation of speech recognition models for the target locale.
+ethicalReviewProcess: >
+  Internal review covering consent, anonymisation and data minimisation.
+
+# True = dataset is non-exclusive to MDC; False = exclusively hosted on MDC.
+exclusivityOptOut: true
+
+# Must be true to actually submit. Keep true so dry-run mirrors the live call.
+agreeToSubmit: true

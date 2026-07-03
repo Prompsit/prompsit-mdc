@@ -1,0 +1,172 @@
+{
+  "scored_items_clean": 4896,
+  "engines_overall_pass_pct": {
+    "strong_locale_aware": 100.0,
+    "commercial_mid": 96.1,
+    "realistic_mid": 57.9,
+    "separator_weak": 59.2,
+    "unlocalized_passthrough": 16.5,
+    "raw_weak": 16.5
+  },
+  "best_engine": "strong_locale_aware",
+  "separation_vs_best": {
+    "unlocalized_passthrough": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "wrong_decimal_separator": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_grouping": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "mis_converted_datetime": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_currency_format": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_unit_format": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "raw_weak": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "wrong_decimal_separator": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_grouping": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "mis_converted_datetime": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_currency_format": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_unit_format": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "realistic_mid": {
+      "kind": "broad",
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "wrong_decimal_separator": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_grouping": {
+          "best_pass": 100.0,
+          "eng_pass": 49.7,
+          "p": 0.0,
+          "separated": true
+        },
+        "mis_converted_datetime": {
+          "best_pass": 100.0,
+          "eng_pass": 49.4,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_currency_format": {
+          "best_pass": 100.0,
+          "eng_pass": 51.5,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_unit_format": {
+          "best_pass": 100.0,
+          "eng_pass": 45.9,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "separator_weak": {
+      "kind": "targeted",
+      "target_classes": [
+        "wrong_decimal_separator"
+      ],
+      "separated_on_target": true,
+      "classes_separated": 5,
+      "classes_total": 5,
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "wrong_decimal_separator": {
+          "best_pass": 100.0,
+          "eng_pass": 14.9,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_grouping": {
+          "best_pass": 100.0,
+          "eng_pass": 27.9,
+          "p": 0.0,
+          "separated": true
+        },
+        "mis_converted_datetime": {
+          "best_pass": 100.0,
+          "eng_pass": 90.8,
+          "p": 0.0,
+          "separated": true
+        },
+        "broken_currency_format": {
+          "best_pass": 100.0,
+          "eng_pass": 32.8,
+          "p": 0.0,
+          "separated": true
+        },
+        "wrong_unit_format": {
+          "best_pass": 100.0,
+          "eng_pass": 85.6,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    }
+  },
+  "k1_verdict": "PASS",
+  "note": "Engines are corruption-operator simulations; scoring uses the real D2 validators. Swap in live baselines/<system>/<pair>.jsonl when a credential is available."
+}

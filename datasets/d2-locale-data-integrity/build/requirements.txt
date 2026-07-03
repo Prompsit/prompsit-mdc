@@ -1,0 +1,5 @@
+# D2 build dependencies (Python 3.11+)
+# CLDR oracle: pure-Python, Windows-clean (PyICU deliberately avoided).
+Babel==2.18.0
+# Croissant 1.0 metadata build + validation (build_croissant.py).
+mlcroissant>=1.0

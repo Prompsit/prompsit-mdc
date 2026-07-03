@@ -1,0 +1,241 @@
+{
+  "scored_items_clean": 3024,
+  "engines_overall_pass_pct": {
+    "strong_resource_aware": 100.0,
+    "commercial_mid": 95.2,
+    "realistic_mid": 50.3,
+    "key_translator": 0.0,
+    "schema_dropper": 0.0,
+    "untranslated_passthrough": 0.0,
+    "raw_weak": 0.0
+  },
+  "best_engine": "strong_resource_aware",
+  "separation_vs_best": {
+    "untranslated_passthrough": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "parser_break": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "key_path_translated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "schema_changed": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "value_untranslated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_literal": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_marked": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "raw_weak": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "parser_break": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "key_path_translated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "schema_changed": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "value_untranslated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_literal": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_marked": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "realistic_mid": {
+      "kind": "broad",
+      "classes_separated": 6,
+      "classes_total": 6,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "parser_break": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "key_path_translated": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "schema_changed": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "value_untranslated": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_literal": {
+          "best_pass": 100.0,
+          "eng_pass": 50.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_marked": {
+          "best_pass": 100.0,
+          "eng_pass": 50.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "key_translator": {
+      "kind": "targeted",
+      "target_classes": [
+        "key_path_translated"
+      ],
+      "separated_on_target": true,
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "parser_break": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "key_path_translated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "schema_changed": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "value_untranslated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_literal": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_marked": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "schema_dropper": {
+      "kind": "targeted",
+      "target_classes": [
+        "schema_changed"
+      ],
+      "separated_on_target": true,
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "parser_break": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "key_path_translated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "schema_changed": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "value_untranslated": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_literal": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "nonvalue_modified_marked": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    }
+  },
+  "k1_verdict": "PASS",
+  "note": "Corruption-operator simulation; real D3 validators. Swap in live baselines later."
+}

@@ -1,0 +1,225 @@
+{
+  "scored_items_clean": 4356,
+  "engines_overall_pass_pct": {
+    "strong_tag_aware": 100.0,
+    "commercial_mid": 98.3,
+    "icu_weak": 73.5,
+    "placeholder_weak": 85.1,
+    "tag_blind_nmt": 64.3,
+    "raw_nmt": 76.4
+  },
+  "best_engine": "strong_tag_aware",
+  "separation_vs_best": {
+    "tag_blind_nmt": {
+      "kind": "broad",
+      "classes_separated": 7,
+      "classes_total": 7,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "xliff": {
+          "best_pass": 100.0,
+          "eng_pass": 0.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "html_tag": {
+          "best_pass": 100.0,
+          "eng_pass": 97.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "software_placeholder": {
+          "best_pass": 100.0,
+          "eng_pass": 1.8,
+          "p": 0.0,
+          "separated": true
+        },
+        "template_variable": {
+          "best_pass": 100.0,
+          "eng_pass": 64.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "icu_messageformat": {
+          "best_pass": 100.0,
+          "eng_pass": 99.4,
+          "p": 0.0005,
+          "separated": true
+        },
+        "markdown_inline": {
+          "best_pass": 100.0,
+          "eng_pass": 28.9,
+          "p": 0.0,
+          "separated": true
+        },
+        "do_not_translate": {
+          "best_pass": 100.0,
+          "eng_pass": 87.9,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "raw_nmt": {
+      "kind": "broad",
+      "classes_separated": 7,
+      "classes_total": 7,
+      "verdict": "SEPARATED",
+      "per_class": {
+        "xliff": {
+          "best_pass": 100.0,
+          "eng_pass": 37.9,
+          "p": 0.0,
+          "separated": true
+        },
+        "html_tag": {
+          "best_pass": 100.0,
+          "eng_pass": 98.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "software_placeholder": {
+          "best_pass": 100.0,
+          "eng_pass": 38.2,
+          "p": 0.0,
+          "separated": true
+        },
+        "template_variable": {
+          "best_pass": 100.0,
+          "eng_pass": 80.6,
+          "p": 0.0,
+          "separated": true
+        },
+        "icu_messageformat": {
+          "best_pass": 100.0,
+          "eng_pass": 95.8,
+          "p": 0.0,
+          "separated": true
+        },
+        "markdown_inline": {
+          "best_pass": 100.0,
+          "eng_pass": 56.7,
+          "p": 0.0,
+          "separated": true
+        },
+        "do_not_translate": {
+          "best_pass": 100.0,
+          "eng_pass": 92.4,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    },
+    "icu_weak": {
+      "kind": "targeted",
+      "target_classes": [
+        "icu_messageformat"
+      ],
+      "separated_on_target": true,
+      "classes_separated": 2,
+      "classes_total": 7,
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "xliff": {
+          "best_pass": 100.0,
+          "eng_pass": 99.5,
+          "p": 0.0,
+          "separated": true
+        },
+        "html_tag": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "software_placeholder": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "template_variable": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "icu_messageformat": {
+          "best_pass": 100.0,
+          "eng_pass": 21.2,
+          "p": 0.0,
+          "separated": true
+        },
+        "markdown_inline": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        },
+        "do_not_translate": {
+          "best_pass": 100.0,
+          "eng_pass": 100.0,
+          "p": 1.0,
+          "separated": false
+        }
+      }
+    },
+    "placeholder_weak": {
+      "kind": "targeted",
+      "target_classes": [
+        "software_placeholder",
+        "template_variable"
+      ],
+      "separated_on_target": true,
+      "classes_separated": 7,
+      "classes_total": 7,
+      "verdict": "LOCALIZED",
+      "per_class": {
+        "xliff": {
+          "best_pass": 100.0,
+          "eng_pass": 59.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "html_tag": {
+          "best_pass": 100.0,
+          "eng_pass": 98.5,
+          "p": 0.0,
+          "separated": true
+        },
+        "software_placeholder": {
+          "best_pass": 100.0,
+          "eng_pass": 57.3,
+          "p": 0.0,
+          "separated": true
+        },
+        "template_variable": {
+          "best_pass": 100.0,
+          "eng_pass": 97.0,
+          "p": 0.0,
+          "separated": true
+        },
+        "icu_messageformat": {
+          "best_pass": 100.0,
+          "eng_pass": 99.6,
+          "p": 0.006,
+          "separated": true
+        },
+        "markdown_inline": {
+          "best_pass": 100.0,
+          "eng_pass": 75.8,
+          "p": 0.0,
+          "separated": true
+        },
+        "do_not_translate": {
+          "best_pass": 100.0,
+          "eng_pass": 95.2,
+          "p": 0.0,
+          "separated": true
+        }
+      }
+    }
+  },
+  "k1_verdict": "PASS",
+  "note": "Engines are corruption-operator simulations; scoring uses the real D1 validators. Swap in live baselines/<system>/<pair>.jsonl when a credential is available."
+}

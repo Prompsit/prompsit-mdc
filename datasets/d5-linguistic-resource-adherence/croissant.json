@@ -1,0 +1,300 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "fileSet": "cr:fileSet",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "samplingRate": "cr:samplingRate"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "prompsit-d5-linguistic-resource-adherence",
+  "description": "D5 - Linguistic-resource adherence. Items pair a real terminology entry (CLDR display names via Babel, Unicode license) and/or a translation-memory match (D1 core sentences) with a source segment; the system must respect the provided glossary and TM. EN -> 9 languages, four resource profiles (glossary / tm_exact / tm_fuzzy / conflict). Open layer = dev (full references) + test inputs + contrastive pack; test/hidden references withheld. Version 1.0 uses oracle-validated machine labels (oracle_validated); human review is not required.",
+  "version": "1.0",
+  "datePublished": "2026-06-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://mozilladatacollective.com/",
+  "citeAs": "Prompsit D5 - Linguistic-resource Adherence (v1.0, 2026).",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "dev.jsonl",
+      "name": "dev.jsonl",
+      "description": "Open dev split: records with references.",
+      "contentUrl": "data/dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "1dfbfbe31498eb8114449b87dcde6f9b91d4a28277f01359543875c4fe41916c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test.input.jsonl",
+      "name": "test.input.jsonl",
+      "description": "Gated test inputs.",
+      "contentUrl": "data/test.input.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "ce517b49feae0278242e96db2f222f68c270b9c6aa0875f2cf6c6dc2d630590d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "contrastive.dev.jsonl",
+      "name": "contrastive.dev.jsonl",
+      "description": "Validator-verified contrastive minimal pairs (dev).",
+      "contentUrl": "data/contrastive.dev.jsonl",
+      "encodingFormat": "application/jsonlines",
+      "sha256": "f01197c2270a2857a0259c694a2c29759e63695c420614261932b748537294ee"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dev",
+      "name": "dev",
+      "description": "Dev records.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dev/item_id",
+          "name": "item_id",
+          "description": "Stable id; shared by all 9 locale rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/target_lang",
+          "name": "target_lang",
+          "description": "Target language.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/kind",
+          "name": "kind",
+          "description": "Resource profile (glossary/tm_exact/tm_fuzzy/conflict).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "kind"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/source",
+          "name": "source",
+          "description": "Source segment with the term in the [...] slot.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/reference",
+          "name": "reference",
+          "description": "Resource-respecting output (dev only).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "reference"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "test_inputs",
+      "name": "test_inputs",
+      "description": "Test inputs (no reference).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/item_id",
+          "name": "item_id",
+          "description": "Stable id; shared by all 9 locale rows.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source_lang",
+          "name": "source_lang",
+          "description": "Source language (en).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/target_lang",
+          "name": "target_lang",
+          "description": "Target language.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "target_lang"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/kind",
+          "name": "kind",
+          "description": "Resource profile (glossary/tm_exact/tm_fuzzy/conflict).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "kind"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/source",
+          "name": "source",
+          "description": "Source segment with the term in the [...] slot.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test_inputs/split",
+          "name": "split",
+          "description": "dev / test / hidden.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test.input.jsonl"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

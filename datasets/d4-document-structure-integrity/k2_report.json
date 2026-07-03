@@ -1,0 +1,17 @@
+{
+  "base_acceptance_pct": 100.0,
+  "legal_variants_tested": 7200,
+  "false_positive_flips": 0,
+  "false_positive_rate_pct": 0.0,
+  "stop_threshold_pct": 5.0,
+  "verdict": "PASS",
+  "by_generator": {
+    "trailing_nl": 1440,
+    "reindent": 1440,
+    "collapsed": 1440,
+    "doctype": 1440,
+    "upper_tags": 1440
+  },
+  "flips_by_generator": {},
+  "examples": []
+}

@@ -1,0 +1,68 @@
+# MDC submission metadata (dry-run ready). Archive = open layer only
+# (dev references + test inputs + contrastive). Hidden split and
+# withheld test references are never uploaded.
+file_path: open-v1.0.tar.gz
+datasheet_path: DATASHEET.md
+
+name: Prompsit D4 - Document-structure Integrity
+shortDescription: MT benchmark for preserving document structure (HTML tree, tables, links) under translation; EN to 9 languages.
+longDescription: >
+  An evaluation benchmark that tests whether machine translation keeps a
+  document's structure intact - its heading, paragraph, list, table, link, and
+  image tree - while translating only the text. The documents are composed
+  from human translation segments shared with the D1 inline-asset dataset on a
+  templated structure: 160 HTML documents x 9 target languages
+  (ca/es/fr/it/pt-PT/de/nl/pl/ru) = 1,440 records. Scoring is fully automatic:
+  for each record, deterministic checks compare the document tree of the
+  system output against the source and report which of five error categories
+  occur (lost or duplicated node, block-order change, table-cell corruption,
+  broken link or image, round-trip failure); a record passes when none does,
+  and a system's score is its pass rate, reported overall and per category.
+  Reference labels are generated automatically from the source, not
+  human-annotated. No training set is shipped; the dev split is a small
+  labelled set for optional few-shot prompting or sanity checks. The open
+  layer contains the dev split (with references), the test inputs (references
+  withheld), and a contrastive pack of (correct, damaged) minimal pairs; the
+  hidden split is not distributed. The scoring code is open-source at
+  https://github.com/Prompsit/prompsit-mdc - see DATASHEET.md inside the
+  archive for construction method, checks, and limits.
+
+locale: mul
+task: MT
+format: JSONL
+licenseAbbreviation: CC_BY_4_0
+showContactInfo: true
+visibility: PUBLIC
+
+restrictions: Test-split reference labels withheld; hidden split not distributed.
+forbiddenUsage: >
+  No additional legal restriction beyond CC-BY-4.0. For benchmark integrity,
+  disclose any training or tuning on the open test inputs and do not report such
+  runs as uncontaminated official benchmark results.
+additionalConditions: >
+  Preserve the included attribution notices; cite the dataset and upstream
+  projects when used in publications.
+
+pointOfContactFullName: Prompsit Language Engineering
+pointOfContactEmail: info@prompsit.com
+
+fundedByFullName: Prompsit Language Engineering
+fundedByEmail: info@prompsit.com
+
+legalContactFullName: Prompsit Language Engineering
+legalContactEmail: info@prompsit.com
+
+createdByFullName: Prompsit Language Engineering
+createdByEmail: info@prompsit.com
+
+intendedUsage: >
+  Evaluation of machine-translation systems for document-structure preservation
+  across nine languages. No training set is shipped.
+ethicalReviewProcess: >
+  Permissively licensed text and templated structure only; no personal data.
+
+# True = dataset is non-exclusive to MDC; False = exclusively hosted on MDC.
+exclusivityOptOut: true
+
+# Must be true to actually submit. Keep true so dry-run mirrors the live call.
+agreeToSubmit: true
